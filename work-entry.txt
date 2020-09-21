@@ -1,2 +1,15 @@
 The explanation of how i am going to make a desktop database application 
 
+"""
+A program that stores the book info:
+Title, Author
+Year, ISBN
+
+User can:
+View all records
+search an entry
+add  entry
+update entry
+delete
+close
+"""""
