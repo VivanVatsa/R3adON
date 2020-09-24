@@ -42,8 +42,17 @@ def search(title="", author="", year="", isbn=""):
     return rows
 
 
+def delete(id):
+    conn = sqlite3.connect("books.db")
+    cur = conn.cursor()
+    cur.execute("DELETE FROM book WHERE  id=?", (id,))
+    conn.commit()
+    conn.close()
+
+
 connect()
 # insert("Moby Dick", "Yang-Lee", 1990, 3625497665)
 insert("The Martian", "something soemthing", 2015, 5698521475)
+delete(2)
 print(view())
 print(search(author="Yang-Lee"))
