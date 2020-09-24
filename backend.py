@@ -17,9 +17,21 @@ def connect():
 def insert(title, author, year, isbn):
     conn = sqlite3.connect("books.db")
     cur = conn.cursor()
-    cur.execute("INSERT INTO bookK VALUES ()")
+    cur.execute("INSERT INTO book VALUES (NULL, ?,?,?,?)",
+                (title, author, year, isbn))
     conn.commit()
     conn.close()
 
 
+def view():
+    conn = sqlite3.connect("books.db")
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM book")
+    rows = cur.fetchall()
+    conn.close()
+    return rows
+
+
 connect()
+insert("Moby Dick", "Yang-Lee", 1990, 3625497665)
+print(view())
