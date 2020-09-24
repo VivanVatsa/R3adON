@@ -32,6 +32,18 @@ def view():
     return rows
 
 
+def search(title="", author="", year="", isbn=""):
+    conn = sqlite3.connect("books.db")
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM  book WHERE title=? OR author=? OR year=? OR isbn=?",
+                (title, author, year, isbn))
+    rows = cur.fetchall()
+    conn.close()
+    return rows
+
+
 connect()
-insert("Moby Dick", "Yang-Lee", 1990, 3625497665)
+# insert("Moby Dick", "Yang-Lee", 1990, 3625497665)
+insert("The Martian", "something soemthing", 2015, 5698521475)
 print(view())
+print(search(author="Yang lee"))
