@@ -64,7 +64,7 @@ connect()
 # insert("The Martian", "something soemthing", 2015, 5698521475)
 # delete(2)
 
-update(6, "All the bright places",
-       "someone's writing style i like the most", 2020, 9101821000)
+# update(6, "All the bright places",
+#        "someone's writing style i like the most", 2020, 9101821000)
 print(view())
-print(search(author="Yang-Lee"))
+# print(search(author="Yang-Lee"))
