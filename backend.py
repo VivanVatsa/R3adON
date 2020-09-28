@@ -66,5 +66,5 @@ connect()
 
 # update(6, "All the bright places",
 #        "someone's writing style i like the most", 2020, 9101821000)
-print(view())
+# print(view())
 # print(search(author="Yang-Lee"))
