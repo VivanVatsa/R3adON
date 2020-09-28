@@ -47,6 +47,9 @@ def update_command():
 
 window = Tk()
 
+
+window.wm_title("R3adON")
+
 # for the labels title author etc
 l1 = Label(window, text='Title')
 l1.grid(row=0, column=0)
