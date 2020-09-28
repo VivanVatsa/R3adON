@@ -1,11 +1,13 @@
 from tkinter import *
 import backend
 
+
 def get_selected_row(event):
-   global selected_tuple
-   index =list1.curselection()[0]
-   selected_tuple=list1.get(index)
-   return(selected_tuple)
+    global selected_tuple
+    index = list1.curselection()[0]
+    selected_tuple = list1.get(index)
+    return(selected_tuple)
+
 
 def view_command():
     list1.delete(0, END)
@@ -14,19 +16,23 @@ def view_command():
 
 
 def search_command():
-    list1.delete(0,END)
+    list1.delete(0, END)
     for row in backend.search(title_next.get(), author_text.get(), year_next.get(), isbn_next.get()):
         list1.insert(END, row)
 
 
 def add_command():
-    backend.insert(title_next.get(), author_text.get(), year_next.get(), isbn_next.get())
+    backend.insert(title_next.get(), author_text.get(),
+                   year_next.get(), isbn_next.get())
     list1.delete(0, END)
-    list1.insert(END, (title_next.get(), author_text.get(), year_next.get(), isbn_next.get()))
+    list1.insert(END, (title_next.get(), author_text.get(),
+                       year_next.get(), isbn_next.get()))
 
 
 def delete_command():
     backend.delete(selected_tuple[0])
+
+
 window = Tk()
 
 # for the labels title author etc
