@@ -11,8 +11,6 @@
 ### Twitter
 * [@vivanvatsa](https://www.twitter.com/VivanVatsa)
 --------------
---------------
---------------
 ### First Frame
 
 ![alt text](https://github.com/VivanVatsa/R3adON/blob/master/assets/first-look.png)
