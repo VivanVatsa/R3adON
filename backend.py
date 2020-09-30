@@ -61,7 +61,7 @@ def update(id, title, author, year, isbn):
 
 connect()
 # insert("Moby Dick", "Yang-Lee", 1990, 3625497665)
-# insert("The Martian", "something soemthing", 2015, 5698521475)
+# insert("The Martian", "something something", 2015, 5698521475)
 # delete(2)
 
 # update(6, "All the bright places",
