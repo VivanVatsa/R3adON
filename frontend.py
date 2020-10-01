@@ -1,6 +1,10 @@
 from tkinter import *
-import backend
+# import backend
+from OOP_backend import Database
 
+# creating a class instance
+
+database = Database()
 
 def get_selected_row(event):
     global selected_tuple
@@ -18,18 +22,18 @@ def get_selected_row(event):
 
 def view_command():
     list1.delete(0, END)
-    for row in backend.view():
+    for row in database.view():
         list1.insert(END, row)
 
 
 def search_command():
     list1.delete(0, END)
-    for row in backend.search(title_next.get(), author_text.get(), year_next.get(), isbn_next.get()):
+    for row in database.search(title_next.get(), author_text.get(), year_next.get(), isbn_next.get()):
         list1.insert(END, row)
 
 
 def add_command():
-    backend.insert(title_next.get(), author_text.get(),
+    database.insert(title_next.get(), author_text.get(),
                    year_next.get(), isbn_next.get())
     list1.delete(0, END)
     list1.insert(END, (title_next.get(), author_text.get(),
@@ -37,11 +41,11 @@ def add_command():
 
 
 def delete_command():
-    backend.delete(selected_tuple[0])
+    database.delete(selected_tuple[0])
 
 
 def update_command():
-    backend.update(selected_tuple[0], title_next.get(), author_text.get(),
+    database.update(selected_tuple[0], title_next.get(), author_text.get(),
                    year_next.get(), isbn_next.get())
 
 
