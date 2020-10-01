@@ -1,6 +1,5 @@
 import sqlite3
 
-
 class Database:
 
     def __init__(self, db):
@@ -24,7 +23,7 @@ class Database:
         conn.commit()
         conn.close()
 
-    def view():
+    def view(self):
         conn = sqlite3.connect("books.db")
         cur = conn.cursor()
         cur.execute("SELECT * FROM book")
