@@ -4,7 +4,7 @@ from OOP_backend import Database
 
 # creating a class instance
 
-database = Database("books.db")
+database = Database("books2.db")
 
 def get_selected_row(event):
     global selected_tuple
