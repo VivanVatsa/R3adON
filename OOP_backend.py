@@ -1,5 +1,6 @@
 import sqlite3
 
+# now its all organises to this one true indent. 
 class Database:
 
     def __init__(self, db):
@@ -15,7 +16,7 @@ class Database:
 
     # the first we need to add the entry function
 
-    def insert(title, author, year, isbn):
+    def insert(self, title, author, year, isbn):
         conn = sqlite3.connect("books.db")
         cur = conn.cursor()
         cur.execute("INSERT INTO book VALUES (NULL, ?,?,?,?)",
@@ -40,14 +41,14 @@ class Database:
         conn.close()
         return rows
 
-    def delete(id):
+    def delete(self, id):
         conn = sqlite3.connect("books.db")
         cur = conn.cursor()
         cur.execute("DELETE FROM book WHERE  id=?", (id,))
         conn.commit()
         conn.close()
 
-    def update(id, title, author, year, isbn):
+    def update(self, id, title, author, year, isbn):
         conn = sqlite3.connect("books.db")
         cur = conn.cursor()
         cur.execute("UPDATE book SET title=?, author=?, year=?, isbn=? WHERE  id=?",
