@@ -1,4 +1,5 @@
 # this is a trivial project, more like its fun.
 class Account:
-
-    def __init__(self,)
+# will do file handling embedded here in this code
+    def __init__(self, filepath):
+        with open(filepath, 'r')
