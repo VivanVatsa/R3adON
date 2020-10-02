@@ -55,6 +55,8 @@ class Database:
                     (title, author, year, isbn, id))
         self.conn.commit()
         # conn.close()
+    def __del__(self):
+        self.conn.close()
 
 
 # connect()
