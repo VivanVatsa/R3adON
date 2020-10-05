@@ -3,7 +3,7 @@
 * ![Download and Get Started](https://github.com/VivanVatsa/R3adON/blob/master/dist/frontend.exe?raw=true)
 -------------
 * Desktop Based Database Book-Keeper Application.
-* Created using PYthon & SQLite.
+* Created using PYthon, Tkinter & SQLite.
 --------------
 ### LinkedIN
 * [@vivanvatsa](https://www.linkedin.com/in/vivanvatsa/)
