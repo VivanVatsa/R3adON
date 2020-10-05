@@ -37,7 +37,7 @@ class Checking(Account):
     
     def transfer(self, amount):
         self.balance = self.balance - amount - self.fee
-checking=Checking("balance.txt")
+checking=Checking("balance.txt", 1)
 # checking.deposit(10)
 checking.transfer(100)
 print(checking.balance)
