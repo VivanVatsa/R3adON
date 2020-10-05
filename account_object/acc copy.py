@@ -31,6 +31,8 @@ class Account:
 
 # inheritance
 class Checking(Account):
+    '''This is a class that generates checking amount objects'''
+    
     # we are talking about the class variable
     type="checking"
     def __init__(self, filepath, fee):
@@ -46,9 +48,13 @@ jacks_checking=Checking("jack.txt", 1)
 jacks_checking.transfer(100)
 print(jacks_checking.balance)
 jacks_checking.commit()
+print(jacks_checking.type)
 
 lol_checking=Checking("lol.txt", 1)
 # checking.deposit(10)
 lol_checking.transfer(100)
 print(lol_checking.balance)
 lol_checking.commit()
+print(lol_checking.type)
+
+print(lol_checking.__doc__)
