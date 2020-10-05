@@ -1,6 +1,6 @@
 # R3eadON
 --------------
-* ![Hit Up](https://github.com/VivanVatsa/R3adON/blob/master/dist/frontend.exe?raw=true)
+* ![Download and Get Started](https://github.com/VivanVatsa/R3adON/blob/master/dist/frontend.exe?raw=true)
 -------------
 * Desktop Based Database Book-Keeper Application.
 * Created using PYthon & SQLite.
