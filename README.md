@@ -8,8 +8,6 @@
 # Throw some ideas
 ### LinkedIN
 * [@vivanvatsa](https://www.linkedin.com/in/vivanvatsa/)
-### Reddit 
-* [@vivanvatsa](https://www.reddit.com/user/VivanVatsa)
 ### Twitter
 * [@vivanvatsa](https://www.twitter.com/VivanVatsa)
 --------------
