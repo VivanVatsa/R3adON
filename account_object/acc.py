@@ -33,8 +33,11 @@ class Account:
 class Checking(Account):
     def __init__(self, filepath):
         Account.__init__(self, filepath)
-
-
+    
+    def transfer(self, amount):
+        self.balance = self.balance - amount
 checking=Checking("balance.txt")
-checking.deposit(10)
+# checking.deposit(10)
+checking.transfer(100)
 print(checking.balance)
+checking.commit()
