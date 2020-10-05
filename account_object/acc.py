@@ -15,11 +15,25 @@ class Account:
     def commit(self):
         with open(self.filepath, 'w') as file:
             file.write(str(self.balance))
-account=Account("balance.txt")
-print(account.balance)
-# account.withdraw(100)
-# account.withdraw(200)
-account.deposit(400)
-print(account.balance)
-account.commit()
-# print(account)
+
+
+
+
+# account=Account("balance.txt")
+# print(account.balance)
+# # account.withdraw(100)
+# # account.withdraw(200)
+# account.deposit(400)
+# print(account.balance)
+# account.commit()
+# # print(account)
+
+
+# inheritance
+class Checking(Account):
+    def __init__(self, filepath):
+        Account.__init__(self.filepath)
+
+checking =Checking("balance.txt")
+checking.deposit(10)
+print(checking.balance)
