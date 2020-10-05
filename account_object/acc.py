@@ -31,14 +31,24 @@ class Account:
 
 # inheritance
 class Checking(Account):
+    # we are talking about the class variable
+    type="checking"
     def __init__(self, filepath, fee):
         Account.__init__(self, filepath)
         self.fee = fee
     
     def transfer(self, amount):
         self.balance = self.balance - amount - self.fee
-checking=Checking("balance.txt", 1)
+
+
+jacks_checking=Checking("balance.txt", 1)
 # checking.deposit(10)
-checking.transfer(100)
-print(checking.balance)
-checking.commit()
+jacks_checking.transfer(100)
+print(jacks_checking.balance)
+jacks_checking.commit()
+
+lol_checking=Checking("balance.txt", 1)
+# checking.deposit(10)
+lol_checking.transfer(100)
+print(lol_checking.balance)
+lol_checking.commit()
